@@ -1,5 +1,5 @@
 Name:		python-croniter
-Version:	6.0.0
+Version:	6.2.4
 Release:	1
 Summary:	Iterate datetime objects with cron-like format
 License:	MIT
@@ -9,13 +9,12 @@ Source0:	https://files.pythonhosted.org/packages/source/c/croniter/croniter-%{ve
 BuildArch:	noarch
 BuildSystem:	python
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(python-dateutil)
-BuildRequires:	python%{pyver}dist(pytz)
+BuildRequires:	python%{pyver}dist(wheel)
 Requires:	python%{pyver}dist(python-dateutil)
-Requires:	python%{pyver}dist(pytz)
 
 %description
 croniter provides iteration for datetime objects with a cron-like
